@@ -1,167 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
-    />
-    <title>Grizzly Engineering</title>
-  </head>
-  <body>
-    <header class="py-6 text-normal">
-      <div class="container flex justify-between items-center">
-        <a href="https://github.com/K3rnel-dev">
-          <img src="./images/logo.png" width="200px" alt="image" /> 
-        </a>
-        <span id="mobileToggle" class="block md:hidden cursor-pointer">
-          <img src="./images/mobileToggle.svg" alt="image" />
-        </span>
+<html oncontextmenu="return false;" onkeypress="return false;" onkeydown="return false;" onkeyup="return false;">
 
-        <ul class="items-center hidden md:flex space-x-6">
-          <button class="btn bg-white-100 py-3 px-[14px]">
-            <div class="flex justify-center items-center space-x-2">
-              <span>RU</span>
-            </div>
-          </button>
-          <button class="btn px-8 btn--state-active">
-            <a href="#Houston has problems:(">Grizzly</a>
-          </button>
-        </ul>
-      </div>
-    </header>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="author" content="K3rnel-Dev" />
+	<meta name="description" content="Github Portfolio of K3rnel-Dev" />
+	<meta name="keywords" content="K3rnel-Dev 1337RCE MALWARE K3rnel" />
+	<title>K3rnel-Dev | Github Portfolio</title>
+	<link rel="shortcut icon" href="assets/logo.png" />
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/fork-awesome.min.css">
+</head>
 
-    <main>
-      <section id="showcase" class="relative pb-5">
-        <div
-          class="container grid md:grid-cols-2 grid-cols-1 justify-center items-center"
-        >
-          <div class="flex flex-col justify-center">
-            <h1 class="text-normal text-6xl xl:heading-xl">
-              Welcome i'm
-              <span class="text-fireColor">Kernel</span>
-            </h1>
-            <p class="text-sm text-normal mt-15 mb-6">About me:<br>I am a junior developer, I am developing software and penetration testing<br>
-              I am studying programming languages such as Java, python, c++/c# and i are creating medium-level projects</p>
-            <button class="btn btn--state-active">
-              <a href="https://github.com/K3rnel-Dev?tab=repositories" target="_blank">Github</a>
-            </button>
-          </div>
-          <div class="row-start-2 md:row-start-auto">
-            <img
-              src="./images/david.png"
-              width="100%"
-              height="100%"
-              alt="image"
-            />
-          </div>
-        </div>
-      </section>
+<body>
+	<div id="header">
+		<img src="assets/logo.png"/>
+		<h1>KERNEL DEV</h1>
+		<p>&#8205;<span text="Security Researcher , Pentester , WebDev , Reverser "></span></p>
+		<script> 
+			var span = document.querySelector("p span"), textArr = span.getAttribute("text").split(", "), maxTextIndex = textArr.length, sPerChar = .15, sBetweenWord = 1.5, textIndex = 0; function typing(e, t) { var n = 0, r = t.length - 1, a = setInterval(function () { span.innerHTML += t[n], n == r ? (clearInterval(a), setTimeout(function () { deleting(e, t) }, 1000 * sBetweenWord)) : n += 1 }, 1000 * sPerChar) } function deleting(e, t) { var n = t.length - 1, r = setInterval(function () { span.innerHTML = t.substr(0, n), 0 == n ? (clearInterval(r), e + 1 == maxTextIndex ? e = 0 : e += 1, setTimeout(function () { typing(e, textArr[e]) }, 1000 * sBetweenWord)) : n -= 1 }, 1000 * sPerChar) } typing(textIndex, textArr[textIndex]);
+		</script>
+	</div>
 
-      <section id="popular-rates" class="bg-dark pb-12">
-        <div
-          class="lg:max-w-[990px] max-w-[768px] md:mt-[-50px] lg:mt-[-100px] relative mx-auto"
-        >
-          <div
-            class="categories p-4 grid grid-cols-1 lg:grid-cols-3 justify-center gap-6"
-          >
-            <div
-              class="py-5 px-[50px] flex flex-col justify-center items-center gap-y-4 border border-dark"
-            >
-              <img src="./images/Cloud.svg" alt="image" />
-              <h3 class="heading-lg text-normal">Software Developing</h3>
-            </div>
-            <div
-              class="py-5 px-[50px] flex flex-col justify-center items-center gap-y-5 border border-dark"
-            >
-              <img src="./images/Cloud.svg" alt="image" />
-              <h3 class="heading-lg text-normal">Penetration Testing</h3>
-            </div>
-            <div
-              class="py-5 px-[50px] flex flex-col justify-center items-center gap-y-4 border border-dark"
-            >
-              <img src="./images/Cloud.svg" alt="image" />
-              <h3 class="heading-lg text-normal">Opensource software</h3>
-            </div>
-          </div>
-        </div>
-        
-        <div
-          class="container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-center gap-6 mt-[112px]"
-        >
-          <div
-            class="flex flex-col justify-center items-center p-5 prirority transition bg-main gap-y-6 hover:shadow-2xl text-center"
-          >
-            <img src="./images/Thuder.svg" alt="image" />
-            <h4 class="heading-lg text-[20px] text-normal">
-              More. . .
-            </h4>
-          </div>
-          <div
-            class="flex flex-col justify-center items-center p-5 prirority gap-y-6 prirority transition bg-main hover:shadow-2xl text-center"
-          >
-            <img src="./images/Thuder.svg" alt="image" />
-            <h4 class="heading-lg text-[20px] text-normal">
-              More. . .
-            </h4>
-          </div>
-          <div
-            class="flex flex-col justify-center items-center p-5 prirority gap-y-6 prirority transition bg-main hover:shadow-2xl text-center"
-          >
-            <img src="./images/Thuder.svg" alt="image" />
-            <h4 class="heading-lg text-[20px] text-normal">
-              More. . .
-            </h4>
-          </div>
-          <div
-            class="flex flex-col justify-center items-center p-5 prirority gap-y-6 bg-main transition hover:shadow-2xl text-center"
-          >
-            <img src="./images/Thuder.svg" alt="image" />
-            <h4 class="heading-lg text-[20px] text-normal">
-              More. . .
-            </h4>
-          </div>
-        </div>
-      </section>
-      </section>
-      </footer>
-    </main>
+	<div id="socials">
+		<a class="link" href="https://t.me/l337rce" target="_blank"><i class="fa fa-telegram"></i>
+			Telegram</a>
+		<a class="link" href="https://github.com/K3rnel-Dev" target="_blank"><i class="fa fa-github"></i> Github
+		<a class="link" href="https://github.com/K3rnel-Dev/VenomRat-SourceCode" target="_blank"><i class="fa fa-gnupg"></i> VenomRat Source code(repository)</a>
+	</div>
+</body>
 
-    <script>
-      document.addEventListener("alpine:init", () => {
-        Alpine.store("accordion", {
-          tab: 0,
-        });
-
-        Alpine.data("accordion", (idx) => ({
-          init() {
-            this.idx = idx;
-          },
-          idx: -1,
-          handleClick() {
-            this.$store.accordion.tab =
-              this.$store.accordion.tab === this.idx ? 0 : this.idx;
-          },
-          handleRotate() {
-            return this.$store.accordion.tab === this.idx ? "rotate-180" : "";
-          },
-          handleToggle() {
-            return this.$store.accordion.tab === this.idx
-              ? `max-height: ${this.$refs.tab.scrollHeight}px`
-              : "";
-          },
-        }));
-      });
-    </script>
-
-    <script src="./app.js"></script>
-  </body>
 </html>
