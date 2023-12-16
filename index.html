@@ -1,34 +1,168 @@
-<!DOCTYPE html>
-<html oncontextmenu="return false;" onkeypress="return false;" onkeydown="return false;" onkeyup="return false;">
-
+<html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<meta name="author" content="K3rnel-Dev" />
-	<meta name="description" content="Github Portfolio of K3rnel-Dev" />
-	<meta name="keywords" content="K3rnel-Dev 1337RCE MALWARE K3rnel" />
-	<title>K3rnel-Dev | Github Portfolio</title>
-	<link rel="shortcut icon" href="assets/logo.png" />
-	<link rel="stylesheet" href="assets/style.css">
-	<link rel="stylesheet" href="assets/fork-awesome.min.css">
+	<title>K3rnel-Dev - главная</title>
+	<link type="Image/x-icon" href="favicon.ico" rel="icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta charset="UTF-8" />
 </head>
-
 <body>
-	<div id="header">
-		<img src="assets/logo.png"/>
-		<h1>KERNEL DEV</h1>
-		<p>&#8205;<span text="Security Researcher , Pentester , WebDev , Reverser "></span></p>
-		<script> 
-			var span = document.querySelector("p span"), textArr = span.getAttribute("text").split(", "), maxTextIndex = textArr.length, sPerChar = .15, sBetweenWord = 1.5, textIndex = 0; function typing(e, t) { var n = 0, r = t.length - 1, a = setInterval(function () { span.innerHTML += t[n], n == r ? (clearInterval(a), setTimeout(function () { deleting(e, t) }, 1000 * sBetweenWord)) : n += 1 }, 1000 * sPerChar) } function deleting(e, t) { var n = t.length - 1, r = setInterval(function () { span.innerHTML = t.substr(0, n), 0 == n ? (clearInterval(r), e + 1 == maxTextIndex ? e = 0 : e += 1, setTimeout(function () { typing(e, textArr[e]) }, 1000 * sBetweenWord)) : n -= 1 }, 1000 * sPerChar) } typing(textIndex, textArr[textIndex]);
-		</script>
+	<div id="screen">
+		<div class="crt"></div>
 	</div>
+	<div id="content">
+		<text id="langs" onclick="changeLang()">
+			[<text id="RU" class="lang">RU</text> / <text id="EN", class="lang">EN</text>]
+		</text>
+		<br />
+		<h1 id="title">Я - K3rnel-Dev</h1>
+		<br />
+		<h3 id="bio" style="width: 80vw">Программист C#, Python. Реверсер (обратный разработчик). Учусь в направлении специалист по ИБ. Дизайнер.</h3>
+		<br />
+		<div id="border"></div>
+		<br />
+		<div id="centered">
+			<div id="float_container"> 
+				<h3 id="about">Обо мне</h3>
+				<br/>
+				<h5 id="skills" style="text-align: left;">
+					- Знание языков: Русский. Базовое понимание: Английский<br/><br/>
+					- Подробные знания об Компьютерных-Сетях и об Машинах ЭВМ и т.д, умение работать с Windows, Linux и знание их особенностей<br/><br/>
+					- Умение работать с ЯП C#, Python. При необходимости с Html,Css,JS.<br/><br/>
+				</h5>
+			</div>
+			<div id="float_container"> 
+				<h3 id="more">Больше ресурсов</h3>
+				<br/>
+				<h5 id="todo">// TODO add some articles</h5>
+			</div>
+		</div>
+		<br/>
+		<div id="border"></div>
+		<div id="centered">
+			<div id="float_container">
+				<br />
+				<h3 id="projects">Проекты</h3>
+				<br />
+				<a href="https://github.com/K3rnel-Dev/JS-KEYLOGGER">
+					<div id="about_entry">
+						<h3>JavaScript - Keylogger</h3>
+						<h5>Online JavaScript Keylogger</h5>
+					</div>
+				</a>
+				<a href="https://github.com/K3rnel-Dev/VenomRat-SourceCode">
+					<div id="about_entry">
+						<h3>Venom Rat - Source Code</h3>
+						<h5>Venom-Rat - 6.0.3 Open-Source code</h5>
+					</div>
+				</a>
+				<a href="https://github.com/K3rnel-Dev/KatanaFramework">
+					<div id="about_entry">
+						<h3>Katana-Framework</h3>
+						<h5>Toolkit for automated pentesting in Kali Linux</h5>
+					</div>
+				</a>
+				<a href="https://github.com/K3rnel-Dev/GrizzlyStealer">
+					<div id="about_entry">
+						<h3>Grizzly Stealer</h3>
+						<h5>Simple stealer in python. Stealing more 20+ browsers</h5>
+					</div>
+				</a>
+				<a href="https://github.com/K3rnel-Dev/PDF-EXPLOIT-2022">
+					<div id="about_entry">
+						<h3>PDF-EXPLOIT 2022</h3>
+						<h5>Reversed file and get source code of Silent Pdf Exploit 2022.</h5>
+					</div>
+				</a>
+			</div>
+			<div id="float_container">
+				<br />
+				<h3 id="contacts">Контакты</h3>
+				<br />
+				<a href="https://github.com/K3rnel-Dev">
+					<div id="about_entry">
+						<h3>GitHub</h3>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script>
 
-	<div id="socials">
-		<a class="link" href="https://t.me/l337rce" target="_blank"><i class="fa fa-telegram"></i>
-			Telegram</a>
-		<a class="link" href="https://github.com/K3rnel-Dev" target="_blank"><i class="fa fa-github"></i> Github
-		<a class="link" href="https://github.com/K3rnel-Dev/VenomRat-SourceCode" target="_blank"><i class="fa fa-gnupg"></i> VenomRat Source code(repository)</a>
-	</div>
+		// To simflify language switching templates are used
+
+		const locale = {
+			"RU": {
+				"title": "Привет, я - K3rnel-Dev",
+				"bio": "Программист C#, Питон. Реверсер (обратная разработка). Я учусь в направлении специалиста по исследованию безопасности. Дизайнер.",
+				"skills": "- Знание языков: Русский. Базовое понимание: Английский<br><br>\
+				- Подробные знания об Компьютерных-Сетях и об Машинах ЭВМ и т.д, умение работать с Windows, Linux и знание их особенностей<br/><br/>\
+				- Умение работать с ЯП C#, Python. При необходимости с Html,Css,JS.<br/><br/>",
+				"about": "Обо мне",
+				"more": "Больше ресурсов",
+				"todo": "// TODO добавить статьи",
+				"projects": "Проекты",
+				"contacts": "Контакты"
+			},
+			"EN": {
+				"title": "Hello i`m - K3rnel-Dev",
+				"bio": "Programmer C#, Python. Reverse (reverse developer). I am studing in the direction of Security Researcher specialist. Designer.",
+				"skills": "- Language skills: Russian. Basic understanding: English<br><br>\
+				- Detailed knowledge of computer networks and computer machines, etc., ability to work with Windows, Linux and knowledge of their features<br/><br/>\
+				- Ability to work with JP C#, Python. If necessary, Html,Css,JS.<br/><br/>",
+				"about": "About me",
+				"more": "Больше ресурсов",
+				"todo": "// TODO add more posts`",
+				"projects": "Projects",
+				"contacts": "Contacts"
+			}
+		};
+
+		var current_lang = getUserLang();
+		const beep = new Audio("beep.mp3");
+
+        window.onload = updateInfo(); // Pre-translate page
+        
+        // Change the language
+        function changeLang() {
+            let langs = Object.keys(locale);
+            let index = langs.indexOf(current_lang);
+            current_lang = langs[(index + 1) % langs.length];
+            updateInfo();
+        	beep.play(); // Beep
+        }
+        
+        // Translate & set selected
+        function updateInfo() {
+            setActivated(current_lang)
+            setLocale(current_lang)
+        }
+        
+        function setActivated(id) {
+            let active = document.getElementsByClassName("lang"),
+            element = document.getElementById(id);
+            for (let i = 0; i < active.length; i++)
+                active[i].style.color = "inherit";
+            element.style.color = "#00EE20";
+        }
+        
+        function setLocale(lang) {
+            let new_lang = locale[lang]
+            document.title = new_lang.title;
+            for (const key in new_lang) {
+                let element = document.getElementById(key)
+                if (element)
+                    element.innerHTML = new_lang[key]
+            }
+        }
+        
+        // Not russian = english
+        function getUserLang() {
+            let userLang = navigator.language || navigator.userLanguage;
+            return (userLang.toLowerCase().includes("ru")) ? "RU" : "EN";
+        }
+
+	</script>
 </body>
-
 </html>

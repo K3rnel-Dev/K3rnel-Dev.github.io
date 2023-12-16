@@ -1,0 +1,80 @@
+@font-face {
+    font-family: console; 
+    src: url(font.ttf); 
+}
+
+body {
+    background-color: black;
+}
+
+* {
+    margin: auto;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: console, 'Comic Sans MS', cursive;
+    text-align: center;
+    color: white;
+}
+
+#centered {
+    display: table;
+    margin:0 auto;
+}
+
+#float_container {
+    float:left;
+    width:40vw;
+}
+
+#content {
+    font-size: 20px;
+    padding: 30px;
+}
+
+#about_entry {
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid white;
+    width: 35vw
+}
+
+#langs {
+    text-align: left;
+    display: block;
+    padding: 0 65px 0 0;
+}
+
+#border {
+    width: 95%;
+    background-color: white;
+    height: 2px;
+}
+
+#screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    border: 30px solid transparent;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(150, 150, 150, 0.3), transparent 80%);
+    border-image-source: url(screen.png);
+    border-image-slice: 30;
+    border-image-outset: 0;
+}
+
+.crt {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(0deg, transparent 1rem, black 1.2rem);
+    background-size: 200% 200%;
+    animation: barberpole 1s linear infinite;
+    animation-direction: alternate;
+    animation-duration: 500ms;
+}
+
+@keyframes barberpole {
+    100% {
+        background-position: 100% 100%;
+    }
+}
